@@ -1,0 +1,12 @@
+__pycache__
+.idea
+Spotify Recently Played.iml
+out.csv
+*.log
+download
+import.json
+*.pyc
+spotify.sh
+config.yml
+config-ben.yml
+*.sqlite
