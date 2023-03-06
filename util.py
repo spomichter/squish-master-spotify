@@ -61,11 +61,11 @@ def config():
 
         if os.path.isfile(path):
             logging.info("Found at " + path)
-            CONFIG = yaml.load(open(path))
+            CONFIG = yaml.safe_load(open(path))
             logging.info("Returning from config {}".format(CONFIG))
 
     if os.path.isfile(get_path("config-ben.yml")):
-        secondary = yaml.load(open(get_path("config-ben.yml")))
+        secondary = yaml.safe_load(open(get_path("config-ben.yml")))
         CONFIG = shite_merge_config(CONFIG, secondary)
 
     return CONFIG
