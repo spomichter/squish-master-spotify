@@ -24,7 +24,7 @@ def configure_logging():
     boto_resources_logger = logging.getLogger('boto3')
     boto_resources_logger.setLevel('INFO')
 
-
+#test
 configure_logging()
 
 
