@@ -25,9 +25,7 @@ def configure_logging():
     boto_resources_logger.setLevel('INFO')
 
 
-configure_logging()
-
-#github test
+configure_logging()t
 
 
 class DownloadException(Exception):
