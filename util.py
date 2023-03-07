@@ -49,7 +49,7 @@ def config():
         "" if "SPOTIFY_DOWNLOADER_CONFIG_PATH" not in os.environ else os.environ["SPOTIFY_DOWNLOADER_CONFIG_PATH"],
         "config.yml",
         get_path("config.yml"),
-        "~/Spotify-history-downloader/config.yml",
+        "~/squish-master-spotify/config.yml",
         "~/IdeaProjects/Spotify-history-downloader/config.yml"
     ]
 
