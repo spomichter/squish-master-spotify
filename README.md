@@ -1,4 +1,4 @@
-# Spotify history downloader
+# Spotify Data Management and Analaysis App for 🍯🌭
 
 Continually download your spotify listening history. Gets around the 50 song history limit of the spotify API.
 
@@ -12,17 +12,15 @@ Also contains scripts for useful things:
 
 Coming soon:
 
-* Ben's Big Data Analysis to tell you everything you already knew about your music taste  
+* Big Data Analysis to tell you everything you already knew about your music taste  
 
 ## Installation 
-
-Note: Installation is not exactly easy so please create an issue if you need help. 
 
 The downloader needs to run on a server so it can execute an hourly cron job. You could run it on your computer but remember that, due to spotify limitations, if you listen to more than 50 songs with your computer turned off then some songs will be lost. I personally use Digital Ocean (the cheapest tier). The downloader uses very little resources 
 
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) and create a new application
 2. In the dashboard, click on the application you just created and in the green "Edit Settings" add "http://localhost:8080" as a redirect url. 
-3. Download [get_token.py](https://raw.githubusercontent.com/BenBanerjeeRichards/Spotify-history-downloader/master/get_token.py) to **your computer**. 
+3. Download [get_token.py] to **your computer**. 
 4. Run ```$ python3 get_token.py```. Note you need to install the packages ```bottle``` and ```requests```
 5. Follow the instructions, a browser should open with all the environment variables you need.
 
@@ -30,7 +28,7 @@ Next ssh into your server
 
 1. Paste the contents of step 5 (all of the variables) into your ~/.bashrc (or ~/.bash_profile) file. 
 2. Reload bash via ```$ bash```
-3. ```$ git clone https://github.com/benbanerjeerichards/Spotify-history-downloader && cd Spotify-history-downloader```
+3. ```$ git clone [repo]```
 4. ```pip3 install -r requirements.txt```
 5. ```python3 main.py```
 
@@ -54,7 +52,7 @@ $ nano /etc/cron.hourly/spotify
 ```bash
 #!/bin/bash
 
-python3 ~/Spotify-history-downloader/main.py
+python3 ~/squish-master-spotify/main.py
 ```
 
 Hopefully that should now work.
