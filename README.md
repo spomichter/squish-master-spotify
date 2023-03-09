@@ -1,4 +1,4 @@
-# Spotify Data Management and Analaysis App for 🍯🌭
+# Spotify Data Management and Analysis App for 🍯🌭
 
 Continually download your spotify listening history. Gets around the 50 song history limit of the spotify API.
 
