@@ -37,6 +37,7 @@ Next set up AWS CLI + credentials
 2. Install AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 3. ```aws configure```
 4. Follow command line setup
+5. Update env variable BUCKET-NAME in s3_upload.py
 
 that should work. You can inspect main.sqlite using ```sqlite3 main.sqlite``` and run ```select * from play;``` to see the downloaded files.
 
