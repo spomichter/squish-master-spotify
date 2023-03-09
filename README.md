@@ -28,11 +28,17 @@ Next ssh into your server
 
 1. Paste the contents of step 5 (all of the variables) into your ~/.bashrc (or ~/.bash_profile) file. 
 2. Reload bash via ```$ bash```
-3. ```$ git clone [repo]```
+3. ```$ git clone https://github.com/spomichter/squish-master-spotify/```
 4. ```pip3 install -r requirements.txt```
 5. ```python3 main.py```
 
-Hopefully that should work. You can inspect main.sqlite using ```sqlite3 main.sqlite``` and run ```select * from play;``` to see the downloaded files.
+Next set up AWS CLI + credentials
+1. Set up AWS account
+2. Install AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+3. ```aws configure```
+4. Follow command line setup
+
+that should work. You can inspect main.sqlite using ```sqlite3 main.sqlite``` and run ```select * from play;``` to see the downloaded files.
 
 Finally you need to set up a cron job to run the script every hour. Most linux distros should have a ```/etc/cron.hourly/``` folder you can put scripts into that run every hour. ***DO NOT put main.py directly in this folder***
 
