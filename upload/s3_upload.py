@@ -4,7 +4,7 @@ from util import get_path
 import hashlib
 import logging
 
-BUCKET_NAME = "spotify-data-bbr"
+BUCKET_NAME = "spotify-master"
 OBJECT_NAME = "main.sql"
 
 
@@ -30,5 +30,6 @@ def upload():
         s3 = boto3.resource('s3')
         obj = s3.Object(BUCKET_NAME, OBJECT_NAME)
         obj.put(Body=open("main.sql", "rb").read())
+        print("AWS SHIT FINISHED")
     else:
         logging.info("Dump not changed with checksum={}".format(checksum))

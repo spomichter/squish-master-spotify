@@ -24,7 +24,7 @@ def configure_logging():
     boto_resources_logger = logging.getLogger('boto3')
     boto_resources_logger.setLevel('INFO')
 
-#test
+
 configure_logging()
 
 
@@ -45,6 +45,7 @@ def insert(tracks, db: DbStore):
     # Get last track listened to stored in db
     # This is to ensure we don't duplicate items in database
     latest_track_time = db.most_recent_played_at()
+    print("LATEST TRACK TIME", latest_track_time)
     logging.info("Retrieved tracks from Spotify, filtering out ones played up to {}".format(latest_track_time))
     if latest_track_time:
         tracks = remove_tracks_before_inc(tracks, latest_track_time)

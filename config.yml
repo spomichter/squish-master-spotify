@@ -31,7 +31,7 @@ sounds_good:
   # Archive playlist to move to afer move_afer_days days
   move_to_playlist: 3ZEphevFVeYJin3VKfapgl
   # Spotify user associated with API credentials
-  user_id: benbanerjeerichards
+  user_id: spomichter
   # Move from playlist_id to move_to_playlist if not saved to library within move_after_days
   move_after_days: 30
 

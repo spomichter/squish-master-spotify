@@ -22,6 +22,7 @@ def get_credentials():
     creds = Credentials(os.environ["SPOTIFY_CLIENT_ID"], os.environ["SPOTIFY_CLIENT_SECRET"],
                         os.environ["SPOTIFY_REFRESH_TOKEN"])
     get_access_token(creds)
+    print("CREDS:", creds)
     return creds
 
 
